@@ -79,6 +79,15 @@ namespace ABSoftware.ServerFiles
             }
         }
 
+        public void BroadcastPacket(byte[] data, Client[] except = null)
+        {
+            foreach (Client client in clients.ToArray())
+            {
+                if (client != null && (except == null || !except.Contains(client)))
+                    client.Send(data);
+            }
+        }
+
         public bool Disconnect(string ID)
         {
             Client target = clients.FirstOrDefault(c => Equals(c.ID, ID));

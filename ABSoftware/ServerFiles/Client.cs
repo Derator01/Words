@@ -51,7 +51,7 @@ namespace ABSoftware.ServerFiles
                         Array.Resize(ref bytes, count);
                         CheckBytes(bytes);
                     }
-                    Console.WriteLine(count);
+                    //Console.WriteLine(count);
                 }
             }
             catch(Exception)

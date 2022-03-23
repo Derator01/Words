@@ -150,7 +150,7 @@ namespace ABSoftware.ServerFiles.Utils
             return false;
         }
 
-        public string ToString(byte[] array)
+        public static string ToString(byte[] array)
         {
             string text = "";
             for (int i = 0; i < array.Length; i++)
